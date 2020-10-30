@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'WorldColliderRegular';
+  src: url('https://cdn.glitch.com/12e8d23e-5a09-41e4-8be1-39d7a1f7d631%2Fwebfonts_Syne-Regular.woff?v=1603659426280'); 
+}
+
+body{
+  background-color: #313131;
+  color: white;
+    font-family: 'WorldColliderRegular',sans-serif;
+
+
+}
+button {
+  font-family: 'WorldColliderRegular',sans-serif;
+  background-color: #a9a9a9	;
+  text-align: center;
+  padding: 0 5%;
+}
+
+button {
+  display: inline-block;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 8px;
+  border: none;
+}
+
+tr {
+  outline: 2px solid black;
+}
+
+video {
+  max-width: 50vw;
+}
+
+model-viewer {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 40vh;
+}

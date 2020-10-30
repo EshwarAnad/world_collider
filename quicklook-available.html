@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QL IOS TEST</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js"></script>
+    <style>
+      * {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Is iOS AR Quick Look enabled on this device?</h1>
+    <h2
+      style="background-color: rgba(255, 255, 255, 0.5); border-radius: 4px;"
+      id="answer"
+    >
+      ...
+    </h2>
+
+    <script type="text/javascript">
+      const answerElement = document.querySelector("#answer");
+      const isEnabled = detectiOSARQuickLook();
+      answerElement.innerHTML = isEnabled ? "Yes" : "No";
+      answerElement.style.color = isEnabled ? "limegreen" : "red";
+    </script>
+  </body>
+</html>
