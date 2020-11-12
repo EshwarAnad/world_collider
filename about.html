@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WORLD COLLIDER</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://unpkg.com/bowser@2.4.0/es5.js"></script>
+    <script src="/script.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    
+    <div id="main_section">
+    <div id="logo">
+      <a href="./index.html">
+      WORLD <br />
+      COLLIDER
+      </a>
+    </div>
+    
+    <div id="about">
+      <a href="./about.html">ⓘ</a>
+    </div>
+
+    <div style="padding:56.25% 0 0 0;position:relative;margin-top:120px;"><iframe src="https://player.vimeo.com/video/477357889?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    
+      <br>
+    <h1>About</h1>
+    <div class="main_text">
+      
+      World Collider is an urban research project that uses augmented reality as a medium to collide different worlds. By fusing the different worlds of East and West, fiction and real, the urban and the suburban, and the modern and the contemporary, the project aims to offer a new perspective on the way we view cities.
+      <br><br>
+      Our initial exploration focuses on the collision and fusion of East and West. By extracting unique elements of Tokyo as a 3D model and using it in AR, we can overwrite cities around the world with elements of Tokyo. Through creating an alternative "New Tokyo," we hope that it will provide an opportunity to consider the invasiveness of certain cultures and their resistance to it, as well as the elements that make a city unique.
+    </div>
+      
+    <div class="main_text">
+      
+      ワールド・コライダーは、AR技術を異なる世界同士を融合させるための媒体として使うリサーチプロジェクトです。東洋と西洋、虚構と現実、都市と郊外、近代と現代という異なる世界を衝突させることで、都市への新しい視点を提供することを目的としています。
+      <br><br>
+
+       今回のリサーチでは、東洋と西洋の衝突と融合にフォーカスを当てています。東京の独自な要素を、架空の看板として3Dモデルで抽出し、そのモデルをARの中で使うことで、世界中の都市を東京の要素で上書きすることができます。あり得たかもしれない「新東京像」を探って行く中で、特定の文化圏の持つ侵略性や、それに対する抵抗力、また都市をユニークにする要素について考えるきっかけを作ります。
+    
+      </div>
+
+      <h1>Credits</h1>
+      
+      <div class="main_text">
+        Concept, Design, Development — Tomo Kihara
+        <br>
+        3D model data — sattak6 + Tomo Kihara (CC BY 4.0 : Attribution)
+        <br>
+        Music — Craving Ending by Soft and Furious
+
+      </div>
+      
+      <h1>References</h1>
+      
+      <div class="main_text">
+        
+        <a href="https://oma.eu/publications/smlxl">
+        <u>S,M,L,XL</u> — Rem Koolhaas ＆ Bruce Mau (1995)
+        </a> 
+        <br>
+        <a href="http://www.future-scape.co.jp/g2051engrishspanish/g205303works/g205303worksimage/g2053p05tokyolization/g2053p05tokyolizationeg.html">
+        <u>Tokyolization Project</u> — Daigo Ishi Architects (2016)
+        </a>        
+        <br>
+        <a href="http://hyper-reality.co/">
+        <u>Hyper Reality</u> — Keiichi Matsuda (2016)
+        </a>   
+        <br>
+
+      </div>
+      
+      <div>
+
+
+      
+      
+
+    <script src="/script.js" defer></script>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    let current_browser = returnBrowserName();
+
+    let os_name = bowser_result.parsedResult.os.name;
+    let os_version = bowser_result.parsedResult.os.version;
+    let browser_name = bowser_result.parsedResult.browser.name;
+
+    let runtime_name =
+      "Your device is running " +
+      browser_name +
+      " on " +
+      os_name +
+      " " +
+      os_version;
+    console.log(runtime_name);
+
+    const answerElement = document.querySelector("#answer");
+    const isEnabled = detectiOSARQuickLook();
+
+    if (!isEnabled) {
+      hideAppleAR();
+    }
+
+    console.log(isEnabled);
+    answerElement.innerHTML = isEnabled
+      ? runtime_name + " which supports Apple AR"
+      : "🚫 " + runtime_name +
+        " which does not support Apple AR (only works on iPhone with iOS 13 above). Please use Styly AR instead.";
+    answerElement.style.color = isEnabled ? "white" : "white";
+  </script>
+</html>
