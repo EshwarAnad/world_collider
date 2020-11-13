@@ -1,124 +1,172 @@
 @font-face {
-  font-family: 'WorldColliderRegular';
-  src: url('https://cdn.glitch.com/12e8d23e-5a09-41e4-8be1-39d7a1f7d631%2Fwebfonts_Syne-Regular.woff?v=1603659426280'); 
+  font-family: "WorldColliderRegular";
+  src: url("https://cdn.glitch.com/12e8d23e-5a09-41e4-8be1-39d7a1f7d631%2Fwebfonts_Syne-Regular.woff?v=1603659426280");
 }
 
-body{
+body {
   background-color: #313131;
   color: white;
-  font-family: 'WorldColliderRegular',sans-serif;
-
+  font-family: "WorldColliderRegular", sans-serif;
 }
 
-#main_section{
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #313131;
+  border-top: 4px solid white;
+  color: white;
+  text-align: center;
+}
+
+.footer_menu {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.footer_menu.right {
+  margin-right: 30px;
+}
+
+.footer_menu.left {
+  margin-left: 30px;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+  background: white;
+  z-index: 5;
+  position: fixed;
+}
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+#top {
+  top: 0;
+}
+#bottom {
+  bottom: 0;
+}
+
+#main_section {
   position: relative;
   width: 80%;
   padding: 20px;
   margin: auto;
   align-self: center;
-  
 }
 
-
-#logo{
+#logo {
   position: absolute;
-  top:30px;
-  left:20px;
+  top: 40px;
+  left: 40px;
   font-size: 30px;
-line-height: 88.8%;
-letter-spacing: -0.05em;
-
-
+  line-height: 88.8%;
+  letter-spacing: -0.05em;
 }
 
-#about{
+#instagram {
   position: absolute;
   font-size: 25px;
-  top:30px;
-  right:20px;
-  
+  top: 40px;
+  right: 40px;
 }
 
-.main_text{
-  
-  margin-top:20px;
-    margin-bottom:40px;
+.main_text {
+  margin-top: 20px;
+  margin-bottom: 40px;
 
   font-size: 18px;
   line-height: 168.8%;
-
-
-  
 }
 
-#answer{
+#answer {
   color: white;
-  font-family: 'WorldColliderRegular',sans-serif;
+  font-family: "WorldColliderRegular", sans-serif;
   line-height: 25px;
   padding-bottom: 20px;
-  margin-top:130px
+  margin-top: 130px;
 }
 
-
-a{
+a {
   color: aliceblue;
   text-decoration: none;
 }
 
-.section_building{
+.section_building {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
 }
 
-.main_container{
+.main_container {
   display: flex;
   max-width: 400px;
   flex-direction: column;
   border: 2px solid white;
   margin-bottom: 30px;
   margin-left: 0.5vw;
-  margin-right:0.5vw;
+  margin-right: 0.5vw;
 }
-.thumbnail{
+.thumbnail {
   width: 100%;
 }
-.main_title{
+.main_title {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 5px;
   padding-left: 5px;
 }
-.AR_option_box{ 
+.AR_option_box {
   padding-top: 10px;
   padding-bottom: 10px;
-font-size: 23px;
- display: flex;
- flex-direction: row;
- justify-content: space-evenly;
- text-align: center;
+  font-size: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
-.middleborder{
+.middleborder {
   border-right: 2px solid white;
   padding-top: -10px;
   padding-bottom: -10px;
 }
-.AppleAR{
-  padding:3px;
+.AppleAR {
+  padding: 3px;
 }
 
-
-
-
 button {
-  font-family: 'WorldColliderRegular',sans-serif;
-  background-color: #a9a9a9	;
+  font-family: "WorldColliderRegular", sans-serif;
+  background-color: #a9a9a9;
   text-align: center;
   padding: 0 5%;
 }
@@ -144,4 +192,27 @@ model-viewer {
   margin: 0 auto;
   width: 100%;
   height: 40vh;
+}
+
+#center_photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  width: 450px;
+}
+
+@media only screen and (max-width: 600px) {
+  #center_photo {
+    margin-top: 110px;
+    width: 90%;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  .footer_menu {
+    font-size: 24px;
+  }
 }
