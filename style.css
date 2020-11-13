@@ -86,6 +86,7 @@ body {
   font-size: 30px;
   line-height: 88.8%;
   letter-spacing: -0.05em;
+  z-index:3;
 }
 
 #instagram {
@@ -93,6 +94,7 @@ body {
   font-size: 25px;
   top: 40px;
   right: 40px;
+  z-index:3;
 }
 
 .main_text {
